@@ -3,10 +3,6 @@
 // found in the LICENSE file.
 
 package io.flutter.plugins.videoplayer;
-
-import static com.google.android.exoplayer2.Player.REPEAT_MODE_ALL;
-import static com.google.android.exoplayer2.Player.REPEAT_MODE_OFF;
-
 import android.content.Context;
 import android.net.Uri;
 import android.view.Surface;
@@ -39,6 +35,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 final class VideoPlayer {
   private static final String FORMAT_SS = "ss";
@@ -259,7 +256,7 @@ final class VideoPlayer {
   }
 
   void setLooping(boolean value) {
-    exoPlayer.setRepeatMode(value ? REPEAT_MODE_ALL : REPEAT_MODE_OFF);
+    exoPlayer.setRepeatMode(false);
   }
 
   void setVolume(double value) {
